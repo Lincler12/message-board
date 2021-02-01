@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	a(href="/") back
+	br
+	br
+	form(method="POST" action="/new")
+		input(type="text" placeholder="Enter your name..." name="user" required)
+		textarea(name="text", cols="30", rows="10" required placeholder="Enter your message...")
+		input(type="submit", class="button-blue" value="Submit")

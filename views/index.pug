@@ -1,5 +1,14 @@
 extends layout
 
 block content
+  a(href="./new") Create new message
   h1= title
   p Welcome to #{title}
+
+  each val in messages
+    div(class='message')
+      span(class='time') #{val.timePassed}
+      span(class='name') #{val.user}
+      span #{val.text}
+
+
